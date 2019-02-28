@@ -6,39 +6,61 @@
         <v-flex xs12>
           <h1>Events</h1>
           <p>The Singapore Tech scene is indeed vibrant. Just look at the sheer number of events listed on these fabulous websites.</p>
-          <p>(You may subscribe to these events in iCal or GCal with this URL: https://engineers.sg/cal)</p>
+          <p>(You may subscribe to these events in <a href="http://mcb.berkeley.edu/academic-programs/seminars/ical-feed-instructions" target="_blank">iCal</a> or <a href="https://support.google.com/calendar/answer/37100?hl=en" target="_blank">GCal</a> with this URL: <code>https://engineers.sg/cal</code>)</p>
+          <p>
+            There are also event listings on
+            <v-menu open-on-hover bottom offset-y>
+              <v-btn slot="activator" color="indigo" dark small>these other sites</v-btn>
+              <v-list>
+                <v-list-tile>
+                  <v-list-tile-title><a href="http://www.thelist.asia/" target="_blank">TheList.SG</a></v-list-tile-title>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-title><a href="http://connections.sg/" target="_blank">Connections.SG</a></v-list-tile-title>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-title><a href="https://hackerspace.sg/calendar/" target="_blank">Hackerspace.SG</a></v-list-tile-title>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-title><a href="https://bhappening.wordpress.com/" target="_blank">bHappening</a></v-list-tile-title>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-title><a href="https://www.techinasia.com/heres-complete-list-tech-events-singapore" target="_blank">Tech In Asia</a></v-list-tile-title>
+                </v-list-tile>
+              </v-list>
+            </v-menu> 
+          </p>
         </v-flex>
       </v-layout>
 
-      <v-layout v-for="day in days" :key="day.day" row wrap class="py-2">
+      <v-layout v-for="day in days" :key="day.day" row class="py-2">
         <v-flex xs12>
           <v-card>
             <v-toolbar color="indigo" dark>
               <v-toolbar-title>{{ day.day }}</v-toolbar-title>
             </v-toolbar>
-            <v-list three-line>
+            <v-list>
               <template v-for="event in day.events">
-                <!-- <v-divider v-else-if="item.divider" :key="index" :inset="item.inset" /> -->
+                <v-card :key="event.url" class="mx-1 mt-2">
+                  <v-card-title>
+                    <div>
+                      <div class="headline">{{ event.title }}</div>
+                      <span class="grey--text">{{ event.meetupGroup }}</span><br>
+                      <span>{{ event.dateTime }}</span><br>
+                      <span>{{ event.venue }}</span>
+                    </div>
+                  </v-card-title>
+                  <v-card-actions>
+                    <v-btn color="indigo" dark target="_blank" :href="event.url">{{ event.attendees }}</v-btn>
+                  </v-card-actions>
+                </v-card>
 
-                <v-list-tile :key="event.url" @click="test">
+                <!-- <v-list-tile :key="event.url" @click="test">
                   <v-list-tile-content>
-                    <v-card>
-                      <v-card-title>
-                        <div>
-                          <span class="grey--text">Number 10</span><br>
-                          <span>Whitehaven Beach</span><br>
-                          <span>Whitsunday Island, Whitsunday Islands</span>
-                        </div>
-                      </v-card-title>
-                      <v-card-actions>
-                        <v-btn flat color="orange">Share</v-btn>
-                        <v-btn flat color="orange">Explore</v-btn>
-                      </v-card-actions>
-                    </v-card>
-                    <!-- <v-list-tile-title v-html="event.title" />
-                    <v-list-tile-sub-title v-html="event.meetupGroup" /> -->
+                    <v-list-tile-title v-html="event.title" />
+                    <v-list-tile-sub-title v-html="event.meetupGroup" />
                   </v-list-tile-content>
-                </v-list-tile>
+                </v-list-tile> -->
               </template>
             </v-list>
           </v-card>
@@ -87,39 +109,6 @@ export default {
             }
           ]
         }
-      ],
-      items: [
-        { header: 'Today' },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-          title: 'Brunch this weekend?',
-          subtitle:
-            "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-          title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-          subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-          title: 'Oui oui',
-          subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
-          title: 'Birthday gift',
-          subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?"
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
-          title: 'Recipe to try',
-          subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos."
-        }
       ]
     }
   },
@@ -130,4 +119,7 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 </style>
