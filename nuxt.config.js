@@ -37,8 +37,15 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/vuetify'
   ],
+
+  // Vuetify options
+  vuetify: {
+    //  theme: { }
+  },
+
   /*
   ** Axios module configuration
   */
