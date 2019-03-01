@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build-dploy:
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
@@ -17,12 +17,16 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Generate static assets
-          command: npm run generate
-
+          command: npm run build && npm run generate
       - run:
           name: Login to Commons Host
           command: npx @commonshost/cli login --username $COMMONSHOST_USERNAME --password $COMMONSHOST_PASSWD
-
+          filters:
+            branches:
+              only: master
       - run:
           name: Publish
           command: npx @commonshost/cli deploy --domain staging2.engineers.sg --confirm
+          filters:
+            branches:
+              only: master
