@@ -35,6 +35,7 @@ jobs:
       - run:
           name: Publish
           command: npx @commonshost/cli deploy --domain staging2.engineers.sg --confirm
+
 workflows:
   version: 2
   build_and_deploy:
@@ -42,7 +43,7 @@ workflows:
       - build
       - deploy:
           requires:
-              - build
-            filters:
-              branches:
-                only: master
+            - build
+          filters:
+            branches:
+              only: master
