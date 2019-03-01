@@ -1,41 +1,36 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        engineers-sg-v2
-      </h1>
-      <h2 class="subtitle">
-        My stellar Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
-  </section>
+  <v-content>
+    <v-container fill-height>
+      <v-layout row wrap>
+        <v-flex xs12>
+          <h1>Welcome To Engineers.sg</h1>
+          <h1>Latest Videos</h1>
+        </v-flex>
+        <v-flex md8 sm12 class="px-1">
+          <latest-video-item />
+        </v-flex>
+        <v-flex md4 sm12 class="px-1">
+          <latest-event-item />
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import LatestVideoItem from '~/components/LatestVideoItem.vue'
+import LatestEventItem from '~/components/LatestEventItem.vue'
 
 export default {
   components: {
-    Logo
+    LatestVideoItem,
+    LatestEventItem
   }
 }
 </script>
 
 <style>
-.container {
+/* .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -63,5 +58,5 @@ export default {
 
 .links {
   padding-top: 15px;
-}
+} */
 </style>
