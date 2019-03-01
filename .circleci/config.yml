@@ -11,13 +11,9 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run: npm install
-      - run:
-          name: Generate static assets
-          command: npm run build && npm run generate
       - save_cache:
           paths:
             - node_modules
-            - dist
           key: v1-dependencies-{{ checksum "package.json" }}
   deploy:
     docker:
@@ -29,6 +25,9 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
+      - run:
+          name: Generate static assets
+          command: npm run build && npm run generate
       - run:
           name: Login to Commons Host
           command: npx @commonshost/cli login --username $COMMONSHOST_USERNAME --password $COMMONSHOST_PASSWD
