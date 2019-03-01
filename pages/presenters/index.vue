@@ -11,7 +11,7 @@
         <!-- <v-flex v-for="index in 10" :key="index" xs12 sm6 md4 :class="index % 3 == 0 ? 'py-3' : index % 3 == 1 ? 'py-3' : 'py-3 px-4'"> -->
         <v-flex v-for="index in 10" :key="index" xs6 sm4 md3 class="pa-2">
           <v-card>
-            <v-toolbar color="indigo" dark>
+            <v-toolbar color="indigo" dark dense>
               <nuxt-link :to="`/presenters/${index}`"><v-toolbar-title>Some One</v-toolbar-title></nuxt-link>
             </v-toolbar>
             <v-img

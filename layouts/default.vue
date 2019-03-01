@@ -1,48 +1,33 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app>
+    <v-navigation-drawer v-model="drawer" app>
       <v-list dense>
-        <v-list-tile>
+        <v-list-tile v-for="item in menuItems" :key="item.name">
           <v-list-tile-action>
-            <v-icon>home</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Home</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
+            <v-list-tile-title>{{ item.name }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" />
       <v-toolbar-title>Engineers.SG</v-toolbar-title>
       <v-spacer />
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-tooltip left>
-          <v-btn flat nuxt to="/videos">
-            <v-icon left>video_library</v-icon>Videos
-          </v-btn>
-          <span>Videos</span>
+        <v-tooltip v-for="item in menuItems" :key="'menuitem-'+item.name" bottom :disabled="$vuetify.breakpoint.lgAndUp">
+          <template #activator="data">
+            <v-btn flat nuxt :to="item.to" v-on="data.on">
+              <v-icon left>{{ item.icon }}</v-icon><span class="hidden-md-and-down">{{ item.name }}</span>
+            </v-btn>
+          </template>
+          <span>{{ item.name }}</span>
         </v-tooltip>
-        <v-btn flat nuxt to="/conferences">
+        <!-- <v-btn flat nuxt to="/conferences">
           <v-icon left>assignment</v-icon>Conferences
-        </v-btn>
-        <v-btn flat nuxt to="/organizations">
-          <v-icon left>event</v-icon>Organizations
-        </v-btn>
-        <v-btn flat nuxt to="/presenters">
-          <v-icon left>account_circle</v-icon>Presenters
-        </v-btn>
-        <v-btn flat nuxt to="/events">
-          <v-icon left>event</v-icon>Events
-        </v-btn>
+        </v-btn> -->
         <v-btn icon>
           <v-icon>search</v-icon>
         </v-btn>
@@ -84,7 +69,39 @@
 <script>
 export default {
   data: () => ({
-    drawer: null
+    drawer: false,
+    menuItems: [
+      {
+        name: 'Videos',
+        icon: 'video_library',
+        toolTip: 'Videos',
+        to: '/videos'
+      },
+      {
+        name: 'Conferences',
+        icon: 'assignment',
+        toolTip: 'Conferences',
+        to: '/conferences'
+      },
+      {
+        name: 'Organizations',
+        icon: 'event',
+        toolTip: 'Organizations',
+        to: '/organizations'
+      },
+      {
+        name: 'Presenters',
+        icon: 'account_circle',
+        toolTip: 'Presenters',
+        to: '/presenters'
+      },
+      {
+        name: 'Events',
+        icon: 'event',
+        toolTip: 'Events',
+        to: '/events'
+      }
+    ]
   })
 }
 </script>
