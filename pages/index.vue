@@ -11,10 +11,10 @@
           <h2>Latest Videos</h2>
           <v-layout row wrap>
             <v-flex xs12 class="pa-1">
-              <latest-video-item />
+              <latest-video-card />
             </v-flex>
             <v-flex xs12 class="pa-1">
-              <latest-video-item />
+              <latest-video-card />
             </v-flex>
           </v-layout>
         </v-flex>
@@ -46,12 +46,12 @@
 </template>
 
 <script>
-import LatestVideoItem from '~/components/LatestVideoItem.vue'
+import LatestVideoCard from '~/components/LatestVideoCard.vue'
 import LatestEventItem from '~/components/LatestEventItem.vue'
 
 export default {
   components: {
-    LatestVideoItem,
+    LatestVideoCard,
     LatestEventItem
   }
 }

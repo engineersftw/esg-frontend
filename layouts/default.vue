@@ -38,30 +38,20 @@
     </v-toolbar>
     <nuxt />
     <!-- <v-content>
-      <v-container fluid fill-height>
-        <v-layout
-          justify-center
-          align-center
-        >
-          <v-flex text-xs-center>
-            <v-tooltip left>
-              <v-btn slot="activator" :href="source" icon large target="_blank">
-                <v-icon large>code</v-icon>
-              </v-btn>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <v-btn slot="activator" icon large href="https://codepen.io/johnjleider/pen/rJdVMq" target="_blank">
-                <v-icon large>mdi-codepen</v-icon>
-              </v-btn>
-              <span>Codepen</span>
-            </v-tooltip>
+      <v-container fluid>
+        <v-layout row wrap color="blue">
+          <v-flex lg3 md4 sm6 xs12>
+            <span class="white--text">Engineers.SG is a community initiative by Code Craft Pte Ltd (ACRA: 200706071C)</span>
           </v-flex>
         </v-layout>
       </v-container>
     </v-content> -->
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2017</span>
+    <v-footer color="indigo" :app="false">
+      <v-layout justify-center align-center row wrap>
+        <v-flex xs12 class="text-xs-center">
+          <span class="white--text">AA Engineers.SG is a community initiative by Code Craft Pte Ltd (ACRA: 200706071C)</span>
+        </v-flex>
+      </v-layout>
     </v-footer>
   </v-app>
 </template>
