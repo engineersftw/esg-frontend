@@ -14,10 +14,14 @@
             <v-toolbar color="indigo" dark dense>
               <nuxt-link :to="`/presenters/${index}`"><v-toolbar-title>Some One</v-toolbar-title></nuxt-link>
             </v-toolbar>
-            <v-img
-              width="200px"
-              src="https://pbs.twimg.com/profile_images/378800000325798111/ca48276f8ebbbbac9c6ce83aac3c8548_200x200.jpeg"
-            />
+            <v-container fill-height>
+              <v-layout align-center justify-center>
+                <v-img
+                  width="auto"
+                  src="https://pbs.twimg.com/profile_images/378800000325798111/ca48276f8ebbbbac9c6ce83aac3c8548_200x200.jpeg"
+                />
+              </v-layout>
+            </v-container>
           </v-card>
         </v-flex>
       </v-layout>
@@ -31,6 +35,7 @@ export default {}
 
 <style scoped>
 a {
+  color: white;
   text-decoration: none;
 }
 </style>
