@@ -10,6 +10,34 @@
           <latest-video-item />
         </v-flex>
         <v-flex md4 sm12 class="px-1">
+          <h1>Support</h1>
+
+          <a
+            class="sc-hMqMXs bQQHMC"
+            color="primary"
+            tabindex="0" type="button"
+            href="https://www.patreon.com/bePatron?u=752396&amp;redirect_uri=https%3A%2F%2Fengineers.sg%2F&amp;utm_medium=widget"
+            role="button"
+            target="_blank"
+          >
+            <div class="sc-cSHVUG bDCJxk" display="flex">
+              <div class="sc-ckVGcZ hnTNrw">
+                <span class="sc-dxgOiQ ZmzLr">
+                  <svg viewBox="0 0 569 546" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <circle data-fill="1" id="Oval" cx="362.589996" cy="204.589996" r="204.589996"></circle>
+                    <rect data-fill="2" id="Rectangle" x="0" y="0" width="100" height="545.799988"></rect>
+                  </g>
+                  </svg>
+                </span>
+              </div>
+            <div class="sc-hSdWYo gBDeVU">
+            </div>
+            <div class="button-text">Become a patron</div>
+            </div>
+          </a>
+          <h1>Events</h1>
+          <p>WeBuild.SG is a list of free open events and open source libraries for the curious folks who love to make things!</p>
           <latest-event-item />
         </v-flex>
       </v-layout>
