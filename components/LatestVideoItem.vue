@@ -42,7 +42,7 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 .aspect-ratio {
   position: relative;
   width: 100%;
