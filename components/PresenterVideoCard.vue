@@ -14,7 +14,7 @@
     /> -->
     <v-card-title primary-title>
       <div>
-        <div class="headline mb-0"><a class="video-title" href="/video/1">Women in Dev - PHP Women Asia (International Women's Day Edition) - Singapore PHP User Group</a></div>
+        <div class="headline mb-0"><a class="video-title" href="/videos/1">Women in Dev - PHP Women Asia (International Women's Day Edition) - Singapore PHP User Group</a></div>
         <span class="grey--text">Thursday, 28 February 2019</span>
         <div>
           <v-btn class="ml-0 mb-0" color="indigo white--text" small>14 views</v-btn>

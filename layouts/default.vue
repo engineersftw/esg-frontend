@@ -28,10 +28,10 @@
         <!-- <v-btn flat nuxt to="/conferences">
           <v-icon left>assignment</v-icon>Conferences
         </v-btn> -->
-        <v-btn icon>
+        <v-btn icon nuxt to="/videos">
           <v-icon>search</v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn icon nuxt to="/support">
           <v-icon>loyalty</v-icon>
         </v-btn>
       </v-toolbar-items>
