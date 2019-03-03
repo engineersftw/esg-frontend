@@ -81,8 +81,8 @@
     >
       <v-layout justify-center row wrap>
         <v-flex xs12>
-          <v-layout justify-center align-center row wrap>
-            <v-flex lg3 md4 sm6 xs12 text-xs-center>
+          <v-layout justify-center align-top row wrap class="pt-2 px-2">
+            <v-flex lg2 sm4 xs12 text-xs-center>
               <h2 class="white--text">Navigation</h2>
               <p>
                 <nuxt-link :to="`/about`">About Us</nuxt-link><br>
@@ -94,7 +94,7 @@
                 <nuxt-link :to="`/bookings`">Book Us</nuxt-link><br>
               </p>
             </v-flex>
-            <v-flex lg3 md4 sm6 xs12 text-xs-center>
+            <v-flex lg2 sm4 xs12 text-xs-center>
               <h2 class="white--text">Community Sites</h2>
               <p>
                 <a href="http://webuild.sg/">WeBuild.SG</a><br>
@@ -106,16 +106,14 @@
                 <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 167px; height: 28px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.704fca4914c9b90d7a9d41abcaa19933.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=engineersftw&amp;show_count=false&amp;show_screen_name=true&amp;size=l&amp;time=1551610557105" data-screen-name="engineersftw" />
               </p>
             </v-flex>
-            <v-flex lg3 md4 sm6 xs12 text-xs-center>
-              <a class="twitter-timeline" href="https://twitter.com/engineersftw?ref_src=twsrc%5Etfw">Tweets by engineersftw</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </v-flex>
-            <v-flex lg3 md4 sm6 xs12 text-xs-center>
-              <h1>T4</h1>
+            <v-flex lg2 sm4 xs12 text-xs-center>
+              <a class="twitter-timeline" data-width="240" data-height="400" href="https://twitter.com/engineersftw?ref_src=twsrc%5Etfw">Tweets by engineersftw</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
             </v-flex>
           </v-layout>
         </v-flex>
 
-        <v-flex xs12 class="text-xs-center">
+        <v-flex xs12 class="black text-xs-center py-2">
           <span class="white--text">AA Engineers.SG is a community initiative by Code Craft Pte Ltd (ACRA: 200706071C)</span>
         </v-flex>
       </v-layout>
