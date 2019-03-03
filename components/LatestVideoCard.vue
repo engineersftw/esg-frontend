@@ -17,7 +17,7 @@
         <div class="headline mb-0">Kangaroo Valley Safari</div>
         <span class="grey--text">Thursday, 28 February 2019</span>
         <div>
-          <v-btn small>14 views</v-btn> <v-btn small><v-icon left>event</v-icon> Tweet</v-btn>
+          <v-btn class="ml-0" small>14 views</v-btn> <v-btn small><v-icon left>event</v-icon> Tweet</v-btn>
         </div>
         <p>
           Speaker: Donaldson Tan<br>
@@ -31,10 +31,9 @@
         </p>
       </div>
     </v-card-title>
-    <!-- <v-card-actions>
-      <v-btn flat color="orange">Share</v-btn>
-      <v-btn flat color="orange">Explore</v-btn>
-    </v-card-actions> -->
+    <v-card-actions>
+      <v-btn flat color="indigo" nuxt to="/videos">More Videos</v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
