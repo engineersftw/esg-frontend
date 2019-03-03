@@ -85,7 +85,7 @@
             <v-flex lg2 sm4 xs12 text-xs-center>
               <h2 class="white--text">Navigation</h2>
               <p>
-                <nuxt-link :to="`/about`">About Us</nuxt-link><br>
+                <nuxt-link :to="`/about#aaa`">About Us</nuxt-link><br>
                 <a href="https://blog.engineers.sg">Blog</a><br>
                 <nuxt-link :to="`/videos`">Videos</nuxt-link><br>
                 <nuxt-link :to="`/conferences`">Conferences</nuxt-link><br>
@@ -100,6 +100,7 @@
                 <a href="http://webuild.sg/">WeBuild.SG</a><br>
                 <a href="http://kopijs.org/">KopiJS</a><br>
                 <a href="http://geekbrunch.sg/">GeekBrunch.SG</a><br>
+                <a href="https://www.facebook.com/engineersftw/">EngineersFTW</a><br>
                 <a class="grey-text text-lighten-3" href="https://www.engineers.sg/feed" title="ATOM Feed">
                   <img src="/feed-icon-28x28-473feba11f89b4d197a2263ebb6567e53b75a969cff0679ccf50f6634fa3a4f5.png" alt="Feed icon 28x28">
                 </a><br>
@@ -113,7 +114,7 @@
           </v-layout>
         </v-flex>
 
-        <v-flex xs12 class="black text-xs-center py-2">
+        <v-flex xs12 class="info text-xs-center py-2">
           <span class="white--text">AA Engineers.SG is a community initiative by Code Craft Pte Ltd (ACRA: 200706071C)</span>
         </v-flex>
       </v-layout>
