@@ -48,9 +48,10 @@
               <latest-event-item />
             </v-flex>
             <v-flex xs12 class="pa-1">
-              <div v-for="post in posts" :key="post.id">
+              <!-- graphql -->
+              <!-- <div v-for="post in posts" :key="post.id">
                 {{ post.title }}
-              </div>
+              </div> -->
             </v-flex>
           </v-layout>
         </v-flex>
@@ -65,17 +66,17 @@ import LatestEventItem from '~/components/LatestEventItem.vue'
 import gql from 'graphql-tag'
 
 export default {
-  apollo: {
-    posts: gql`
-      {
-        posts {
-          id
-          title
-          body
-        }
-      }
-    `
-  },
+  // apollo: {
+  //   posts: gql`
+  //     {
+  //       posts {
+  //         id
+  //         title
+  //         body
+  //       }
+  //     }
+  //   `
+  // },
   components: {
     LatestVideoCard,
     LatestEventItem
@@ -85,25 +86,26 @@ export default {
     // const client = this.$apollo.getClient()
     // // most likely you would call mutations like following:
     // this.$apollo.mutate({mutation, variables})
-    const query = gql`
-      query {
-        users {
-          id
-          name
-        }
-      }
-    `
     // Static parameters
     // const variables = {
     //   message: 'Meow',
     // },
-    // but you could also call queries like this:
-    this.$apollo
-      .query({ query })
-      .then(({ data }) => {
-        console.log('gqlxxx', data)
-      })
-      .catch(err => console.log('ERRR', err))
+
+    // BELOW SHOULD WORK
+    // const query = gql`
+    //   query {
+    //     users {
+    //       id
+    //       name
+    //     }
+    //   }
+    // `
+    // this.$apollo
+    //   .query({ query })
+    //   .then(({ data }) => {
+    //     console.log('gqlxxx', data)
+    //   })
+    //   .catch(err => console.log('ERRR', err))
   }
 }
 </script>
