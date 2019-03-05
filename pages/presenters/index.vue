@@ -5,7 +5,9 @@
         <v-flex xs12>
           <h1>Presenters</h1>
           <p>The presenters we recorded.</p>
-          <h2>TODO: handle no picture, no presenters found when filtering...</h2>
+          <h2>
+            TODO: handle no picture, no presenters found when filtering...
+          </h2>
           <v-autocomplete
             v-model="model"
             :items="states"
@@ -53,7 +55,6 @@ export default {
     entries: [],
     isLoading: false,
     model: null,
-    search: null,
     states: [
       'Alabama',
       'Alaska',
@@ -130,36 +131,14 @@ export default {
     items() {
       return this.entries.map(entry => {
         const Description =
-          entry.Description.length > this.descriptionLimit ? entry.Description.slice(0, this.descriptionLimit) + '...' : entry.Description
+          entry.Description.length > this.descriptionLimit
+            ? entry.Description.slice(0, this.descriptionLimit) + '...'
+            : entry.Description
         return Object.assign({}, entry, { Description })
       })
     }
   },
-
-  watch: {
-    search(val) {
-      // Items have already been loaded
-      if (this.items.length > 0) return
-
-      // Items have already been requested
-      if (this.isLoading) return
-
-      this.isLoading = true
-
-      // Lazily load input items
-      fetch('https://api.publicapis.org/entries')
-        .then(res => res.json())
-        .then(res => {
-          const { count, entries } = res
-          this.count = count
-          this.entries = entries
-        })
-        .catch(err => {
-          console.log(err)
-        })
-        .finally(() => (this.isLoading = false))
-    }
-  }
+  watch: {}
 }
 </script>
 

@@ -15,11 +15,15 @@
             :items="supportMonthly"
             label="Supporter Tiers (Monthly)"
           />
-          <v-text-field 
-            label="Your Twitter / Github Username"
-          />
+          <v-text-field label="Your Twitter / Github Username" />
           <v-layout align-center justify-center>
-            <input alt="PayPal – The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_subscribeCC_LG.gif" type="image">
+            <input
+              alt="PayPal – The safer, easier way to pay online!"
+              border="0"
+              name="submit"
+              src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_subscribeCC_LG.gif"
+              type="image"
+            />
           </v-layout>
         </v-flex>
         <v-flex sm12 md6 class="pa-2">
@@ -30,11 +34,15 @@
             :items="supportOneTime"
             label="One time show of support"
           />
-          <v-text-field 
-            label="Your Twitter / Github Username"
-          />
+          <v-text-field label="Your Twitter / Github Username" />
           <v-layout align-center justify-center>
-            <input alt="PayPal – The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_paynowCC_LG.gif" type="image">
+            <input
+              alt="PayPal – The safer, easier way to pay online!"
+              border="0"
+              name="submit"
+              src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_paynowCC_LG.gif"
+              type="image"
+            />
           </v-layout>
         </v-flex>
       </v-layout>
@@ -53,10 +61,14 @@ export default {
       'Platinum Tier: S$50.00 - monthly'
     ],
     selectOneTime: 'Pat on the back S$50.00',
-    supportOneTime: ['Pat on the back S$50.00', 'Awesome Job S$150.00', 'True Believer S$300.00', 'Shining glory of the community S$900.00']
+    supportOneTime: [
+      'Pat on the back S$50.00',
+      'Awesome Job S$150.00',
+      'True Believer S$300.00',
+      'Shining glory of the community S$900.00'
+    ]
   })
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

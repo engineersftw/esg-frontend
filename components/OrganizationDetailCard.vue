@@ -11,12 +11,17 @@
     </v-container>
     <v-card-text primary-title>
       <div class="pb-2">
-        Website: <a href="https://www.alphacamp.co/sg/" target="_blank">https://www.alphacamp.co/sg/</a>
+        Website:
+        <a href="https://www.alphacamp.co/sg/" target="_blank"
+          >https://www.alphacamp.co/sg/</a
+        >
       </div>
       <div>
-        ALPHA Camp is a tech and startup school with campuses in Hong Kong, Taiwan, and Singapore.
-        Our mission is to help talents in Asia build careers in technology. We help you develop future-ready skills,
-        entrepreneurial mindset, and the professional network to succeed in the digital economy.
+        ALPHA Camp is a tech and startup school with campuses in Hong Kong,
+        Taiwan, and Singapore. Our mission is to help talents in Asia build
+        careers in technology. We help you develop future-ready skills,
+        entrepreneurial mindset, and the professional network to succeed in the
+        digital economy.
       </div>
     </v-card-text>
   </v-card>
@@ -26,5 +31,4 @@
 export default {}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
