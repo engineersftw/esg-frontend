@@ -15,7 +15,9 @@
             <v-container fill-height>
               <v-layout align-center justify-center row wrap>
                 <v-flex xs12>
-                  <nuxt-link class="card-title" :to="`/organizations/${index}`">Some Org</nuxt-link>
+                  <nuxt-link class="card-title" :to="`/organizations/${index}`"
+                    >Some Org</nuxt-link
+                  >
                 </v-flex>
                 <v-flex xs12>
                   <v-img

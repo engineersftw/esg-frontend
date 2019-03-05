@@ -1,6 +1,16 @@
-# engineers-sg-v2
+# esg-frontend
 
-> My stellar Nuxt.js project
+> This is version 2 of the Engineers.sg Website.
+
+## Notes
+
+Build with NuxtJS as universal app
+
+VuetifyJS is currently used for look and feel but this may change, need to do some treeshaking for now to reduce bundle size
+
+Need to pre-generate routes
+
+Need to handle case if dynamic route is not pregenerated
 
 ## Build Setup
 

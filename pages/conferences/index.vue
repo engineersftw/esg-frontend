@@ -4,7 +4,10 @@
       <v-layout row wrap>
         <v-flex xs12>
           <h1>Conferences</h1>
-          <p>We have been actively involved in recording local tech conferences too.</p>
+          <p>
+            We have been actively involved in recording local tech conferences
+            too.
+          </p>
         </v-flex>
       </v-layout>
       <v-layout row wrap>
@@ -14,7 +17,9 @@
             <v-container fluid fill-height class="pa-0">
               <v-layout align-center justify-center row wrap>
                 <v-flex xs12 class="py-2">
-                  <nuxt-link class="card-title" :to="`/conferences/${index}`">iOS Conference SG 2019</nuxt-link>
+                  <nuxt-link class="card-title" :to="`/conferences/${index}`"
+                    >iOS Conference SG 2019</nuxt-link
+                  >
                 </v-flex>
                 <v-flex xs12>
                   <nuxt-link :to="`/conferences/${index}`">

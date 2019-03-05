@@ -9,12 +9,14 @@ module.exports = {
   },
   extends: [
     // 'plugin:vue/essential',
-    '@nuxtjs',
+    'eslint:recommended',
+    'plugin:vue/base',
     'plugin:prettier/recommended'
+    // '@nuxtjs'
   ],
   plugins: [
-    // 'vue',
-    'prettier'
+    'vue'
+    // 'prettier'
   ],
   // add your custom rules here
   rules: {
@@ -22,7 +24,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/singleline-html-element-content-newline': 'off',
-    // 'vue/multiline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
     'vue/no-v-html': 'off'
   }
 }

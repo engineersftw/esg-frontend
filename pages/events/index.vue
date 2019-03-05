@@ -5,30 +5,71 @@
       <v-layout row wrap>
         <v-flex xs12>
           <h1>Events</h1>
-          <p>The Singapore Tech scene is indeed vibrant. Just look at the sheer number of events listed on these fabulous websites.</p>
-          <p>(You may subscribe to these events in <a href="http://mcb.berkeley.edu/academic-programs/seminars/ical-feed-instructions" target="_blank">iCal</a> or <a href="https://support.google.com/calendar/answer/37100?hl=en" target="_blank">GCal</a> with this URL: <code>https://engineers.sg/cal</code>)</p>
+          <p>
+            The Singapore Tech scene is indeed vibrant. Just look at the sheer
+            number of events listed on these fabulous websites.
+          </p>
+          <p>
+            (You may subscribe to these events in
+            <a
+              href="http://mcb.berkeley.edu/academic-programs/seminars/ical-feed-instructions"
+              target="_blank"
+              >iCal</a
+            >
+            or
+            <a
+              href="https://support.google.com/calendar/answer/37100?hl=en"
+              target="_blank"
+              >GCal</a
+            >
+            with this URL: <code>https://engineers.sg/cal</code>)
+          </p>
           <p>
             There are also event listings on
             <v-menu open-on-hover bottom offset-y>
-              <v-btn slot="activator" color="indigo" dark small>these other sites</v-btn>
+              <v-btn slot="activator" color="indigo" dark small
+                >these other sites</v-btn
+              >
               <v-list>
                 <v-list-tile>
-                  <v-list-tile-title><a href="http://www.thelist.asia/" target="_blank">TheList.SG</a></v-list-tile-title>
+                  <v-list-tile-title
+                    ><a href="http://www.thelist.asia/" target="_blank"
+                      >TheList.SG</a
+                    ></v-list-tile-title
+                  >
                 </v-list-tile>
                 <v-list-tile>
-                  <v-list-tile-title><a href="http://connections.sg/" target="_blank">Connections.SG</a></v-list-tile-title>
+                  <v-list-tile-title
+                    ><a href="http://connections.sg/" target="_blank"
+                      >Connections.SG</a
+                    ></v-list-tile-title
+                  >
                 </v-list-tile>
                 <v-list-tile>
-                  <v-list-tile-title><a href="https://hackerspace.sg/calendar/" target="_blank">Hackerspace.SG</a></v-list-tile-title>
+                  <v-list-tile-title
+                    ><a href="https://hackerspace.sg/calendar/" target="_blank"
+                      >Hackerspace.SG</a
+                    ></v-list-tile-title
+                  >
                 </v-list-tile>
                 <v-list-tile>
-                  <v-list-tile-title><a href="https://bhappening.wordpress.com/" target="_blank">bHappening</a></v-list-tile-title>
+                  <v-list-tile-title
+                    ><a href="https://bhappening.wordpress.com/" target="_blank"
+                      >bHappening</a
+                    ></v-list-tile-title
+                  >
                 </v-list-tile>
                 <v-list-tile>
-                  <v-list-tile-title><a href="https://www.techinasia.com/heres-complete-list-tech-events-singapore" target="_blank">Tech In Asia</a></v-list-tile-title>
+                  <v-list-tile-title>
+                    <a
+                      href="https://www.techinasia.com/heres-complete-list-tech-events-singapore"
+                      target="_blank"
+                      >Tech In Asia</a
+                    >
+                  </v-list-tile-title>
                 </v-list-tile>
               </v-list>
-            </v-menu> 
+            </v-menu>
           </p>
         </v-flex>
       </v-layout>
@@ -45,13 +86,21 @@
                   <v-card-title>
                     <div>
                       <div class="headline">{{ event.title }}</div>
-                      <span class="grey--text">{{ event.meetupGroup }}</span><br>
-                      <span>{{ event.dateTime }}</span><br>
+                      <span class="grey--text">{{ event.meetupGroup }}</span>
+                      <br />
+                      <span>{{ event.dateTime }}</span>
+                      <br />
                       <span>{{ event.venue }}</span>
                     </div>
                   </v-card-title>
                   <v-card-actions>
-                    <v-btn color="indigo" dark target="_blank" :href="event.url">{{ event.attendees }}</v-btn>
+                    <v-btn
+                      color="indigo"
+                      dark
+                      target="_blank"
+                      :href="event.url"
+                      >{{ event.attendees }}</v-btn
+                    >
                   </v-card-actions>
                 </v-card>
 
@@ -80,7 +129,8 @@ export default {
           events: [
             {
               title: 'AsiaVR Meetup x Pixel',
-              meetupGroup: 'AsiaVR Association - Singapore Virtual Reality Meetup Group',
+              meetupGroup:
+                'AsiaVR Association - Singapore Virtual Reality Meetup Group',
               dateTime: '01-Mar, Fri, 06:00 PM',
               venue: 'Pixel Building, 10 Central Exchange Green, Singapore',
               attendees: 'Join 89 Others',
@@ -105,7 +155,8 @@ export default {
               dateTime: '02-Mar, Sat, 09:00 AM',
               venue: 'Aviva Digital Garage Singapore, 38 Armenian Street',
               attendees: 'Join 24 Others',
-              url: 'https://www.meetup.com/Agile-Circles-Singapore/events/258786457/'
+              url:
+                'https://www.meetup.com/Agile-Circles-Singapore/events/258786457/'
             }
           ]
         }

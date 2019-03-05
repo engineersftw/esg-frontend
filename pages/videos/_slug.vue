@@ -3,7 +3,10 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12>
-          <h1>iOS Panel Discussion - Global Diversity CFP Day SG 2019 {{ $route.params.slug }}</h1>
+          <h1>
+            iOS Panel Discussion - Global Diversity CFP Day SG 2019
+            {{ $route.params.slug }}
+          </h1>
         </v-flex>
       </v-layout>
       <v-layout row wrap>

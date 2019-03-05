@@ -17,17 +17,31 @@
         <div class="headline mb-0">Kangaroo Valley Safari</div>
         <span class="grey--text">Thursday, 28 February 2019</span>
         <div>
-          <v-btn class="ml-0" small>14 views</v-btn> <v-btn small><v-icon left>event</v-icon> Tweet</v-btn>
+          <v-btn class="ml-0" small>14 views</v-btn>
+          <v-btn small><v-icon left>event</v-icon> Tweet</v-btn>
         </div>
         <p>
-          Speaker: Donaldson Tan<br>
-          Discover how to program critical network functions with Software-Defined Networking using Go.<br>
-          Donaldson is the founder at Shukra Networks, a startup working in Software Defined Wide Area Networking.<br>
-          Event Page: <a style="color: black;" href="https://www.meetup.com/golangsg/events/258485148/" target="_blank">https://www.meetup.com/golangsg/events/258485148/</a><br>
-          Produced by Engineers.SG<br>
-          Recorded by: Michael Cheng<br>
-          Help us caption & translate this video!<br>
-          <a style="color: black;" href="https://amara.org/v/nq5u/" target="_blank">https://amara.org/v/nq5u/</a>
+          Speaker: Donaldson Tan<br />
+          Discover how to program critical network functions with
+          Software-Defined Networking using Go.<br />
+          Donaldson is the founder at Shukra Networks, a startup working in
+          Software Defined Wide Area Networking.<br />
+          Event Page:
+          <a
+            style="color: black;"
+            href="https://www.meetup.com/golangsg/events/258485148/"
+            target="_blank"
+            >https://www.meetup.com/golangsg/events/258485148/</a
+          ><br />
+          Produced by Engineers.SG<br />
+          Recorded by: Michael Cheng<br />
+          Help us caption & translate this video!<br />
+          <a
+            style="color: black;"
+            href="https://amara.org/v/nq5u/"
+            target="_blank"
+            >https://amara.org/v/nq5u/</a
+          >
         </p>
       </div>
     </v-card-title>

@@ -11,9 +11,7 @@
             label="Find A State - TBD change to find video"
             placeholder="Start typing to Search"
           />
-          <p>
-            3022 videos found. (may not be needed)
-          </p>
+          <p>3022 videos found. (may not be needed)</p>
         </v-flex>
         <v-flex xs12 text-xs-center>
           <v-pagination

@@ -14,23 +14,45 @@
     /> -->
     <v-card-title primary-title>
       <div>
-        <div class="headline mb-0"><a class="video-title" href="/videos/1">Women in Dev - PHP Women Asia (International Women's Day Edition) - Singapore PHP User Group</a></div>
+        <div class="headline mb-0">
+          <a class="video-title" href="/videos/1"
+            >Women in Dev - PHP Women Asia (International Women's Day Edition) -
+            Singapore PHP User Group</a
+          >
+        </div>
         <span class="grey--text">Thursday, 28 February 2019</span>
         <div>
-          <v-btn class="ml-0 mb-0" color="indigo white--text" small>14 views</v-btn>
+          <v-btn class="ml-0 mb-0" color="indigo white--text" small
+            >14 views</v-btn
+          >
         </div>
       </div>
     </v-card-title>
     <v-card-actions>
-      <v-btn light flat href="https://engineers.sg/organization/31" target="_blank">
+      <v-btn
+        light
+        flat
+        href="https://engineers.sg/organization/31"
+        target="_blank"
+      >
         <v-avatar class="pr-2" size="24px">
-          <img src="https://pbs.twimg.com/profile_images/593598457736077312/i3YmDn_o.jpg">
-        </v-avatar> Singapore PHP
+          <img
+            src="https://pbs.twimg.com/profile_images/593598457736077312/i3YmDn_o.jpg"
+          />
+        </v-avatar>
+        Singapore PHP
       </v-btn>
-      <v-btn light flat href="https://engineers.sg/s/araphoenix" target="_blank">
+      <v-btn
+        light
+        flat
+        href="https://engineers.sg/s/araphoenix"
+        target="_blank"
+      >
         <v-avatar class="pr-2" size="24px">
-          <img src="https://pbs.twimg.com/profile_images/1035947551973953536/zUdz6cNJ_200x200.jpg">
-        </v-avatar>April Kwong
+          <img
+            src="https://pbs.twimg.com/profile_images/1035947551973953536/zUdz6cNJ_200x200.jpg"
+          /> </v-avatar
+        >April Kwong
       </v-btn>
     </v-card-actions>
   </v-card>
