@@ -63,7 +63,7 @@
 <script>
 import LatestVideoCard from '~/components/LatestVideoCard.vue'
 import LatestEventItem from '~/components/LatestEventItem.vue'
-import gql from 'graphql-tag'
+// import gql from 'graphql-tag'
 
 export default {
   // apollo: {
@@ -90,7 +90,7 @@ export default {
     // const variables = {
     //   message: 'Meow',
     // },
-
+    //
     // BELOW SHOULD WORK
     // const query = gql`
     //   query {
